@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# Script that displays all listening TCP/UDP ports with PID and program name.
+# This script displays all listening sockets (TCP, UDP, and UNIX domain) on the machine using netstat with the -l option.
 
-sudo ss -tulnp state listening
+netstat -lp
