@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# This script displays all listening TCP/UDP and UNIX domain sockets with PID and program name.
+# Script that displays all listening TCP/UDP ports with PID and program name.
 
-sudo ss -tulnp
-sudo ss -xlnp
+sudo ss -tulnp state listening
