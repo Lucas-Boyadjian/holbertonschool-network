@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # This script displays all listening sockets (TCP, UDP, and UNIX domain) on the machine using netstat with the -l option.
 
-netstat -lp
+|netstat -lp

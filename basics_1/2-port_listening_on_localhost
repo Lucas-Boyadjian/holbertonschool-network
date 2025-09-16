@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This script tests if port 80 is open on localhost using nc.
+
+nc -l localhost 98
