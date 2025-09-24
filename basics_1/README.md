@@ -17,17 +17,6 @@ By the end of this project, you should be able to explain:
 
 ---
 
-## Resources
-
-- [What is localhost](https://en.wikipedia.org/wiki/Localhost)
-- [What is 0.0.0.0](https://en.wikipedia.org/wiki/0.0.0.0)
-- [What is the hosts file](https://en.wikipedia.org/wiki/Hosts_(file))
-- [Netcat examples](https://www.thegeekstuff.com/2012/04/nc-command-examples/)
-- man or help:  
-  `ifconfig`, `telnet`, `nc`, `cut`
-
----
-
 ## Requirements
 
 - All scripts are written for Ubuntu 22.04
