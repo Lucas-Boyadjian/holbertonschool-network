@@ -22,27 +22,6 @@ By the end of this project, you should be able to explain:
 
 ---
 
-## Resources
-
-- [OSI model](https://en.wikipedia.org/wiki/OSI_model)
-- [Different types of network](https://en.wikipedia.org/wiki/Computer_network)
-- [LAN network](https://en.wikipedia.org/wiki/Local_area_network)
-- [WAN network](https://en.wikipedia.org/wiki/Wide_area_network)
-- [Internet](https://en.wikipedia.org/wiki/Internet)
-- [MAC address](https://en.wikipedia.org/wiki/MAC_address)
-- [What is an IP address](https://en.wikipedia.org/wiki/IP_address)
-- [Private and public address](https://en.wikipedia.org/wiki/Private_network)
-- [IPv4 and IPv6](https://en.wikipedia.org/wiki/IP_version_6)
-- [Localhost](https://en.wikipedia.org/wiki/Localhost)
-- [TCP and UDP](https://en.wikipedia.org/wiki/Transmission_Control_Protocol)
-- [TCP/UDP ports List](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers)
-- [What is ping / ICMP](https://en.wikipedia.org/wiki/Ping_(networking_utility))
-- [Positional parameters](https://tldp.org/LDP/abs/html/internalvariables.html#POSPARAMREF)
-- man or help:  
-  `netstat`, `ping`
-
----
-
 ## Requirements
 
 - All scripts are written for Ubuntu 22.04
