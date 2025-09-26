@@ -1,0 +1,61 @@
+What Happens When You Type https://www.google.com in Your Browser and Press Enter ?
+
+
+Introduction
+When you type a web address like https://www.google.com into your browser and press Enter, it may seem like a simple, instant action. In reality, this triggers a sophisticated sequence of events involving many layers of technology, from your computer all the way to servers on the other side of the world. Understanding this journey is essential for any developer or curious user who wants to know how the Internet truly works.
+In this article, we’ll break down each step of the process and reveal what happens behind the scenes to deliver a web page to your screen.
+
+1. DNS Request — The Internet’s Directory
+Think of DNS as the Internet’s phonebook. When you type www.google.com, your browser doesn’t know where to send your request yet. It first checks its own memory (cache) to see if it already knows the IP address. If not, it asks your operating system, which also keeps a cache. If the answer isn’t there, the browser asks a DNS resolver (often provided by your ISP).
+
+This resolver doesn’t always know the answer either, so it starts a recursive search:
+
+It asks a Root DNS server, which points to the right Top-Level Domain (TLD) server for .com.
+The TLD server then directs it to the authoritative name server for google.com.
+Finally, the authoritative server provides the IP address, which is sent back to your browser.
+Only now does your browser know which “door” to knock on.
+
+2. TCP/IP — Making the Connection
+With the IP address in hand, your browser needs to establish a reliable connection. TCP/IP is like the postal service of the Internet, making sure your data arrives safely and in order.
+
+To do this, your computer and Google’s server perform a three-step TCP handshake:
+
+SYN: Your browser asks to start a conversation.
+SYN-ACK: The server agrees and acknowledges.
+ACK: Your browser confirms, and the TCP connection is open.
+3. Firewall — Security Checkpoint
+Before your request reaches Google, it passes through several firewalls — on your computer, your router, your ISP, and at Google’s data center. Firewalls act like security guards, inspecting each packet and blocking anything suspicious.
+
+4. HTTPS/SSL — Keeping Secrets Safe
+Because you typed https:// , your browser knows to use a secure, encrypted connection. This is where SSL/TLS comes in.
+
+After the TCP handshake, a TLS handshake begins:
+
+Client Hello: Your browser tells the server which encryption methods it supports.
+Server Hello: The server chooses one and sends its SSL certificate.
+Certificate Verification: Your browser checks that the certificate is valid and trusted.
+Key Exchange: Both sides agree on a secret key using public-key cryptography.
+Encryption: All data exchanged from now on is encrypted, so nobody can read or tamper with it.
+5. Load Balancer — Traffic Controller
+Google’s servers handle billions of requests. A load balancer acts like an air traffic controller, distributing incoming requests across many servers to prevent overload, ensure high availability, and improve response times.
+
+6. Web Server vs. Application Server — Serving and Cooking
+The web server (like Nginx or Apache) is the first to receive your request. If you’re asking for something simple, like Google’s logo, it can serve the file directly. For more complex requests, like a search query, it passes the request to the application server.
+
+The application server is the “chef” that prepares your personalized results. It runs the code, processes your request, and decides what information to send back.
+
+7. Database — The Source of Truth
+To answer your search, the application server queries Google’s massive, distributed database (think Bigtable or Spanner). The database finds the most relevant results and sends them back to the application server.
+
+8. Response and Rendering — Bringing It All Together
+The application server builds an HTML page with your results and sends it to the web server, which wraps it in an HTTP response and sends it back through the load balancer, over the encrypted connection, and finally to your browser.
+
+Your browser then gets to work:
+
+It parses the HTML to build the DOM (Document Object Model).
+It fetches and processes CSS (building the CSSOM) and JavaScript.
+It combines everything into a Render Tree, calculates layout, and paints pixels on your screen.
+Just like that, Google’s homepage appears before you.
+
+Conclusion
+Typing a URL and pressing Enter launches a sophisticated process involving caches, recursive DNS queries, secure handshakes, firewalls, load balancing, web and application servers, databases, and finally, browser rendering. Each step is essential to delivering a fast, secure, and reliable web experience.
